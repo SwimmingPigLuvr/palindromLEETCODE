@@ -1,17 +1,12 @@
-fn palindrome(num: i32) -> bool{
+fn palindrome(x: i32) -> bool{
     //string it
-    let n = format!("{:?}", num);
-    // reverse
-    let rev = n.chars().rev().collect::<String>();
-    match n {
-        x if x == rev => {
-            true
-        }
-        _ => {false}
-    }
+    x.to_string()==x.to_string().chars().rev().collect::<String>()
 }
 
 fn main() {
     println!("{:?}", palindrome(696));
-    println!("{:?}", palindrome(69));
+    println!("{:?}", palindrome(123321));
+    println!("{:?}", palindrome(69696));
+    println!("{:?}", palindrome(42024));
+    println!("{:?}", palindrome(110));
 }
